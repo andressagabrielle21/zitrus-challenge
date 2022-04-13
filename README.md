@@ -45,26 +45,16 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# 🎨 Sistema CRUD de Clientes do Arnaldo 🎨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Aplicação desenvolvida em React, utilizando Firebase/Firestore como banco de dados e o pré-processador CSS (SASS/SCSS).
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots: 
+<center> ### Login: </center>
+![login](https://user-images.githubusercontent.com/25774210/163079668-87897e0a-130e-4ec4-adc9-8ff38e400ecc.png)
+<center> ### Home: </center>
+![l![home](https://user-images.githubusercontent.com/25774210/163079603-4c23a024-81fd-4b24-9165-640c8f8cde84.png)
+<center> ### Create user: </center>
+![create](https://user-images.githubusercontent.com/25774210/163079618-dbe5fd2e-2ce9-423c-94cf-bb2b15b11059.png)
+<center> ### View user: </center>
+![view](https://user-images.githubusercontent.com/25774210/163079623-8a0dd49d-2fd1-4cb2-9ee5-3c7b6868777d.png)
