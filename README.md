@@ -50,22 +50,18 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Aplicação desenvolvida em React, utilizando Firebase/Firestore como banco de dados e o pré-processador CSS (SASS/SCSS).
 
 ## Screenshots: 
-<center> ### Login: </center>
-![login](https://user-images.githubusercontent.com/25774210/163079668-87897e0a-130e-4ec4-adc9-8ff38e400ecc.png)
-<center> ### Home: </center>
-![l![home](https://user-images.githubusercontent.com/25774210/163079603-4c23a024-81fd-4b24-9165-640c8f8cde84.png)
-<center> ### Create user: </center>
-![create](https://user-images.githubusercontent.com/25774210/163079618-dbe5fd2e-2ce9-423c-94cf-bb2b15b11059.png)
-<center> ### View user: </center>
-![view](https://user-images.githubusercontent.com/25774210/163079623-8a0dd49d-2fd1-4cb2-9ee5-3c7b6868777d.png)
-
-
+### Login:
 ![login](https://user-images.githubusercontent.com/25774210/163079801-7378fc40-80e4-43a7-bb0a-184b24077ed2.png)
+
+### Home: 
 
 ![home](https://user-images.githubusercontent.com/25774210/163079854-db882dea-6be2-4324-a7ca-97c17d097d9d.png)
 
+### Create user:
+
 ![create](https://user-images.githubusercontent.com/25774210/163079862-41fa0560-041d-4826-9b82-0f24cfb2d46c.png)
 
+### View user's details:
 
 ![view](https://user-images.githubusercontent.com/25774210/163079877-2c4e6734-e816-4cce-93ed-fde0b6a76330.png)
 
