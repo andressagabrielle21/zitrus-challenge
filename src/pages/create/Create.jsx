@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {useForm} from 'react-hook-form';
-import './index.css';
+import {Button} from '../login/LoginStyles'
+import {Container, CreatePage, Form} from './CreateStyles'
 import { db } from '../../firebase-config';
 import {addDoc, collection} from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
@@ -61,13 +62,13 @@ export default function CreateUser() {
   }    
 
   return (
-      <>
-          <div className='createPage'>
+      <Container>
+          <CreatePage>
             <div className="titleDiv">
               <h1>Novo usuário</h1>
-              <Link to="/home"><button className='closeButton'>X</button></Link>
+              <Link to="/home"><Button className='closeButton'>X</Button></Link>
             </div>
-                  <form onSubmit={handleSubmit(onSubmit)}> 
+                  <Form onSubmit={handleSubmit(onSubmit)}> 
                     <input type="text" placeholder='Digite seu nome' onChange={(e) => {setNewName(e.target.value);}}></input>
                     <input type="number" placeholder='Digite seu CEP' {...register("cep")} onBlur={checkCEP} onChange={(e) => {setNewCEP(e.target.value);}}></input>
                     <input type="text" placeholder='Rua (Logradouro)' {...register("rua")} onChange={(e) => {setNewRua(e.target.value);}}></input>
@@ -76,10 +77,10 @@ export default function CreateUser() {
                     <input type="text" placeholder='Cidade' {...register("cidade")} onChange={(e) => {setNewCidade(e.target.value);}}></input>
                     <input type="text" placeholder='Estado' {...register("estado")} onChange={(e) => {setNewEstado(e.target.value);}}></input>
 
-                    <button>Salvar</button>
-                  </form>
-          </div>
+                    <Button>Salvar</Button>
+                  </Form>
+          </CreatePage>
 
-      </>
+      </Container>
   )
 }

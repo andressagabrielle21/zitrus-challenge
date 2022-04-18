@@ -1,9 +1,10 @@
 import React from 'react';
-import './viewDetails.css';
 import {useState} from 'react';
 import { db } from '../../firebase-config';
 import { doc, getDoc} from "firebase/firestore";
 import { Link, useParams } from 'react-router-dom';
+import { Container, Title } from './ViewDetailsStyles';
+import {Button} from '../login/LoginStyles'
 
 export default function ViewDetails() {
 
@@ -21,22 +22,18 @@ export default function ViewDetails() {
 
 
   return (
-    <div>
-        <div className="viewPage">
-                <div className='componentContent'>
-                  <div className='title'>
-                    <h1>{user.name}</h1>
-                    <Link to="/home"><button>X</button></Link>
-                  </div> 
+    <Container>
+          <Title>
+            <h1>{user.name}</h1>
+            <Link to="/home"><Button>X</Button></Link>
+          </Title> 
 
-                  <p><span>CEP:</span> {user.cep}</p>
-                  <p><span>Rua:</span> {user.rua}</p>            
-                  <p><span>Número:</span> {user.numero}</p>            
-                  <p><span>Bairro:</span> {user.bairro}</p>            
-                  <p><span>Cidade:</span> {user.cidade}</p>            
-                  <p><span>Estado:</span> {user.estado}</p>                   
-                </div>
-          </div>
-    </div>
+          <p><span>CEP:</span> {user.cep}</p>
+          <p><span>Rua:</span> {user.rua}</p>            
+          <p><span>Número:</span> {user.numero}</p>            
+          <p><span>Bairro:</span> {user.bairro}</p>            
+          <p><span>Cidade:</span> {user.cidade}</p>            
+          <p><span>Estado:</span> {user.estado}</p>                   
+    </Container>
   )
 }

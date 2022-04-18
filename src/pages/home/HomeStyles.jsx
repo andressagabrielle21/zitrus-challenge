@@ -4,7 +4,6 @@ export const Container = styled.div`
     width: 80vw;
     // MOBILE
     @media only screen and (max-width: 720px) {
-        
         margin: 2rem;
     }
 `
