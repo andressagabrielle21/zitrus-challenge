@@ -1,11 +1,22 @@
-.titleHome {
+import styled from '@emotion/styled';
+
+export const Container = styled.div`
+    width: 80vw;
+    // MOBILE
+    @media only screen and (max-width: 720px) {
+        
+        margin: 2rem;
+    }
+`
+
+export const TitleHome = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem 5rem;
-}
-.viewHome {
-    margin: 3rem 7rem;
+`
+
+export const ViewHome = styled.div`
+    margin: 3rem 0;
     background-color: rgba(255, 255, 255, 0.733);
     padding: 20px;
     border-radius: 1rem;
@@ -31,6 +42,13 @@
                     transition: .5s;
                 }
             }
+            // MOBILE
+            @media only screen and (max-width: 720px) {
+                flex-direction: column;
+                h1 {
+                    font-size: 20px;
+                }
+            }
         }
         .details {
             display: flex;
@@ -38,23 +56,10 @@
             p {
                 margin-right: 1rem;
             }
+            // MOBILE
+            @media only screen and (max-width: 720px) {
+                justify-content: center;
+            }
         }
     }
-}
-
-.addButton {
-    position: fixed;
-    border-radius: 66px;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 18px 32px;
-    font-size: 36px;
-}
-
-
-// MOBILE
-@media only screen and (max-width: 720px) {
-    .viewHome {
-        margin: 3rem;
-    }
-}
+`

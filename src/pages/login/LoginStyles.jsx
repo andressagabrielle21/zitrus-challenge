@@ -1,10 +1,13 @@
-.loginPage {
+import styled from "@emotion/styled";
+
+export const Container = styled.div`
+    min-width: 550px;
+`
+
+export const LoginPage = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    img {
-        width: 60%;
-    }
     .loginBox {
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
         h1 {
@@ -52,22 +55,8 @@
             }
         }
     }
-}
-
-// DESKTOP
-@media only screen and (min-width: 721px) {
-    .loginPage {
-        margin: 0 7rem 0 7rem;
-        .loginBox {
-            width: 50%;
-            height: 50%;
-        }
-    }
-}
-
-// MOBILE
-@media only screen and (max-width: 720px) {
-    .loginPage {
+    // MOBILE
+    @media only screen and (max-width: 720px) {
         display: block;
         img {
             display: none;
@@ -76,9 +65,9 @@
             margin: 50% 17%;
         }
     }
-}
+`
 
-button {
+export const Button = styled.button`
     background-color: rgb(236, 160, 160);
     padding: 15px 40px;
     border: none;
@@ -90,4 +79,13 @@ button {
         transform: scale(.9,.9);
         background-color: rgb(241, 126, 126);
     }
-}
+    &&&.addButton {
+        position: fixed;
+        border-radius: 66px;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 18px 32px;
+        font-size: 36px;
+    }
+`
+// In Styled Components, you don't use '!important', you use '&&&' alongside the class name

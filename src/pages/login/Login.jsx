@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { database } from '../../config';
-import './index.css';
+// import './index.css';
 import LoginForm from './LoginForm';
 import { useNavigate } from 'react-router-dom';
+import {Container} from './LoginStyles'
 
 export default function Login() {
 
@@ -29,16 +30,16 @@ export default function Login() {
   }
 
   return (
-    <div className='IndexLogin'>
-      {(user.username !== "") ? (
-        <div>
-          {alert("Welcome, " + user.username + "!")}
-          {routeChange()}
-        </div>
-      ) : (
-        <LoginForm login={login} error={error}/>
-      )
-      }
-    </div>
+    <Container>
+            {(user.username !== "") ? (
+                <div>
+                  {alert("Welcome, " + user.username + "!")}
+                  {routeChange()}
+                </div>
+              ) : (
+                <LoginForm login={login} error={error}/>
+              )
+              }
+    </Container>
   )
 }

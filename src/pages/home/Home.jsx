@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
-import './index.css';
+import {Button} from '../login/LoginStyles'
+import {Container, TitleHome, ViewHome} from './HomeStyles'
 import { db } from '../../firebase-config';
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
@@ -33,13 +34,13 @@ export default function Home() {
 
 
   return (
-    <div>
-      <div className='titleHome'>
+    <Container>
+      <TitleHome>
         <h1>Usuários: </h1>
-        <Link to="/"><button className="logoutButton">Logout</button></Link>
-      </div>
+        <Link to="/"><Button className="logoutButton">Logout</Button></Link>
+      </TitleHome>
       
-      <div className='viewHome'>
+      <ViewHome>
         {users.map((user) => {
           return (
             <div className='userInfo'>
@@ -61,9 +62,9 @@ export default function Home() {
             </div>
           );
         })}
-      </div>
+      </ViewHome>
 
-      <Link to="/create"><button className='addButton' > + </button> </Link>
-    </div>
+      <Link to="/create"><Button className='addButton' > + </Button> </Link>
+    </Container>
   )
 }

@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './global.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ViewDetails from './pages/viewDetails';
-import Login from './pages/login';
-import CreateUser from './pages/create';
-import Home from './pages/home';
+import ViewDetails from './pages/viewDetails/ViewDetails';
+import Login from './pages/login/Login';
+import CreateUser from './pages/create/Create';
+import Home from './pages/home/Home';
 import { db } from './firebase-config';
+
 
 ReactDOM.render(
   <BrowserRouter>
