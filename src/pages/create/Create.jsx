@@ -37,12 +37,9 @@ export default function CreateUser() {
     }
     // Error message when the API can't reach the inserted data
     catch(err) {
-      alert(err);
+      console.log(err);
     }
   }
-
-  //Make the request to the Firestore DB and new user's data inside 
-
 
   // Function to redirect to the HOME page once the form is submitted
   let navigate = useNavigate(); 
@@ -50,12 +47,14 @@ export default function CreateUser() {
     let path = `/home`; 
     navigate(path);
   }
+  
   const onSubmit = (data) => {
+    //Make the request to the Firestore DB and new user's data inside 
     const createUserForm = async () => {
       await addDoc(usersCollectionReference, {name: newName, cep: newCEP, rua: data.rua , numero: newNumero, bairro: data.bairro, cidade: data.cidade, estado: data.estado});
     };  
     createUserForm();
-    console.log(data);
+
     alert(newName + " adicionado com sucesso!")
     routeChange(data);
   }    
