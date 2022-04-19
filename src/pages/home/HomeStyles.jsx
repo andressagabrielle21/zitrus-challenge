@@ -32,7 +32,6 @@ export const ViewHome = styled.div`
             }
             img {
                 width: 25px;
-                margin-right: 1rem;
                 &:hover {
                     cursor: pointer;
                     padding: 2px;
@@ -46,9 +45,9 @@ export const ViewHome = styled.div`
             }
             // MOBILE
             @media only screen and (max-width: 720px) {
-                flex-direction: column;
+                margin-bottom: 5px;
                 h1 {
-                    font-size: 20px;
+                    font-size: 23px;
                 }
             }
         }
@@ -57,10 +56,6 @@ export const ViewHome = styled.div`
             justify-content: flex-start;
             p {
                 margin-right: 1rem;
-            }
-            // MOBILE
-            @media only screen and (max-width: 720px) {
-                justify-content: center;
             }
         }
     }
