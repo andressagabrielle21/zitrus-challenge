@@ -35,10 +35,13 @@ export const ViewHome = styled.div`
                 margin-right: 1rem;
                 &:hover {
                     cursor: pointer;
-                    padding: 3px;
-                    border: 3px solid red;
+                    padding: 2px;
+                    border: 2px solid red;
                     border-radius: 8px;
                     transition: .5s;
+                }
+                @media only screen and (max-width: 720px) {
+                    width: 20px;
                 }
             }
             // MOBILE
