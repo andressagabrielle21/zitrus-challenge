@@ -38,6 +38,7 @@ export default function Home() {
       <TitleHome>
         <h1>Usuários: </h1>
         <Link to="/"><Button className="logoutButton">Logout</Button></Link>
+        <a href="/about">About</a>
       </TitleHome>
       
       <ViewHome>
@@ -53,6 +54,7 @@ export default function Home() {
               <div className="details">
                 <p>Cidade: {user.cidade}</p> 
                 <p>Estado: {user.estado}</p>
+                
               </div>
 
               <div className='dropDown'>
@@ -64,7 +66,7 @@ export default function Home() {
         })}
       </ViewHome>
 
-      <Link to="/create"><Button className='addButton' > + </Button> </Link>
+      <Link to="/create"><Button className='addButton' title="buttonTest"> + </Button> </Link>
     </Container>
   )
 }
