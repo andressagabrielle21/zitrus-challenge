@@ -5,6 +5,7 @@ import {Container, CreatePage, Form} from './CreateStyles'
 import { db } from '../../firebase-config';
 import {addDoc, collection} from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function CreateUser() {
 
@@ -21,17 +22,16 @@ export default function CreateUser() {
   const checkCEP = (e) => {
     const cep = e.target.value.replace(/\D/g, '');
     try {
-      fetch(`https://opencep.com/v1/${cep}.json`)
-        .then(response => response.json())
-        .then(data =>  {
-            setValue('rua', data.logradouro);
-            setValue('bairro', data.bairro);
-            setValue('cidade', data.localidade);
-            setValue('estado', data.uf);
-            // After autocomplete these past sections, it focus instantly to the input NÚMERO
-            setFocus('numero')
-        });
-    }
+      axios.get(`https://opencep.com/v1/${cep}.json`)
+        .then((response) => {
+          setValue('rua', response.data.logradouro);
+          setValue('bairro', response.data.bairro);
+          setValue('cidade', response.data.localidade);
+          setValue('estado', response.data.uf);
+          // After autocomplete these past sections, it focus instantly to the input NÚMERO
+          setFocus('numero')
+        }); 
+    }    
     // Error message when the API can't reach the inserted data
     catch(err) {
       console.log(err);
