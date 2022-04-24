@@ -24,16 +24,13 @@ export default function CreateUser() {
       fetch(`https://opencep.com/v1/${cep}.json`)
         .then(response => response.json())
         .then(data =>  {
-            // TESTE: console.log(data);
             setValue('rua', data.logradouro);
             setValue('bairro', data.bairro);
             setValue('cidade', data.localidade);
             setValue('estado', data.uf);
             // After autocomplete these past sections, it focus instantly to the input NÚMERO
             setFocus('numero')
-        })
-        
-        
+        });
     }
     // Error message when the API can't reach the inserted data
     catch(err) {

@@ -13,6 +13,8 @@ export default function Home() {
   // To create a reference to the firestore collection which will be worked on
   const usersCollectionReference = collection(db, "users");
 
+  // Function that will render everytime the page renders
+  // Take the array off at the end, so that will rerender the page everytime the state changes.
   useEffect(() => {
     const getUsers = async () => {
       //Get the data inside the collection in Firestore DB
@@ -22,15 +24,14 @@ export default function Home() {
     }
 
     getUsers();
-  }, []);
+  });
 
   //To delete the user
   const deleteUser = async (id) => {
     const userDoc = doc(db, "users", id);
     alert("Você tem certeza que deseja excluir esse contato?");
     await deleteDoc(userDoc);
-    window.location.reload(false);
-  }
+  };
 
 
   return (
@@ -38,7 +39,6 @@ export default function Home() {
       <TitleHome>
         <h1>Usuários: </h1>
         <Link to="/"><Button className="logoutButton">Logout</Button></Link>
-        <a href="/about">About</a>
       </TitleHome>
       
       <ViewHome>

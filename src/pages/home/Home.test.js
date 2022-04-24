@@ -15,4 +15,4 @@ test("check if button is being rendered", () => {
     render(<Home />);
     const btn = screen.getByTitle("buttonTest");
     expect(btn).toBeTruthy();
-})
+});
